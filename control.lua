@@ -28,10 +28,10 @@ function markChunk(chunk, surface)
 		pos_tl = { x = chunk.x * chunk_size, y = chunk.y * chunk_size }
 
 		data = {}
-		data.tl = surface.create_entity({ name = 'crosshair-radar-grid-guide', position = {x=pos_tl.x, y=pos_tl.y} })
-		data.tr = surface.create_entity({ name = 'crosshair-radar-grid-guide', position = {x=pos_tl.x+chunk_size, y=pos_tl.y} })
-		data.bl = surface.create_entity({ name = 'crosshair-radar-grid-guide', position = {x=pos_tl.x, y=pos_tl.y+chunk_size} })
-		data.br = surface.create_entity({ name = 'crosshair-radar-grid-guide', position = {x=pos_tl.x+chunk_size, y=pos_tl.y+chunk_size} })
+		data.tl = surface.create_entity({ name = 'top-left-radar-grid-guide', position = {x=pos_tl.x, y=pos_tl.y} })
+		data.tr = surface.create_entity({ name = 'top-right-radar-grid-guide', position = {x=pos_tl.x+chunk_size, y=pos_tl.y} })
+		data.bl = surface.create_entity({ name = 'bottom-left-radar-grid-guide', position = {x=pos_tl.x, y=pos_tl.y+chunk_size} })
+		data.br = surface.create_entity({ name = 'bottom-right-radar-grid-guide', position = {x=pos_tl.x+chunk_size, y=pos_tl.y+chunk_size} })
 		
 		global.marked_chunks[key] = data;
 	end

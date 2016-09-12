@@ -1,6 +1,6 @@
 {
   "name": "RadarGridGuide",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Radar Grid Guide",
   "author": "jonatkins",
   "description": "Guide for deploying radars on a regular grid, to get 100% coverage without overlap.",

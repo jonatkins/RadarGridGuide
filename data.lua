@@ -2,19 +2,73 @@ data:extend({
 
 	{
 		type = 'decorative',
-		name = 'crosshair-radar-grid-guide',
+		name = 'top-left-radar-grid-guide',
 		flags = {"placeable-neutral", "player-creation", "not-repairable"},
-		icon = "__RadarGridGuide__/graphics/crosshair.png",
-		order = 'z[crosshair-radarguide]',
+		icon = "__RadarGridGuide__/graphics/top-left.png",
+		order = 'z[top-left-radarguide]',
 		render_layer = "higher-object-above",
 		
 		pictures =
 		{
-			filename = "__RadarGridGuide__/graphics/crosshair.png",
+			filename = "__RadarGridGuide__/graphics/top-left.png",
 			priority = "extra-high",
 			width = 64,
 			height = 64,
-			shift = {0,0},
+			shift = {1,1},
+		},
+	},
+
+	{
+		type = 'decorative',
+		name = 'top-right-radar-grid-guide',
+		flags = {"placeable-neutral", "player-creation", "not-repairable"},
+		icon = "__RadarGridGuide__/graphics/top-right.png",
+		order = 'z[top-right-radarguide]',
+		render_layer = "higher-object-above",
+		
+		pictures =
+		{
+			filename = "__RadarGridGuide__/graphics/top-right.png",
+			priority = "extra-high",
+			width = 64,
+			height = 64,
+			shift = {-1,1},
+		},
+	},
+
+	{
+		type = 'decorative',
+		name = 'bottom-left-radar-grid-guide',
+		flags = {"placeable-neutral", "player-creation", "not-repairable"},
+		icon = "__RadarGridGuide__/graphics/bottom-left.png",
+		order = 'z[bottom-left-radarguide]',
+		render_layer = "higher-object-above",
+		
+		pictures =
+		{
+			filename = "__RadarGridGuide__/graphics/bottom-left.png",
+			priority = "extra-high",
+			width = 64,
+			height = 64,
+			shift = {1,-1},
+		},
+	},
+
+	{
+		type = 'decorative',
+		name = 'bottom-right-radar-grid-guide',
+		flags = {"placeable-neutral", "player-creation", "not-repairable"},
+		icon = "__RadarGridGuide__/graphics/bottom-right.png",
+		order = 'z[bottom-right-radarguide]',
+		render_layer = "higher-object-above",
+		
+		pictures =
+		{
+			filename = "__RadarGridGuide__/graphics/bottom-right.png",
+			priority = "extra-high",
+			width = 64,
+			height = 64,
+			shift = {-1,-1},
 		},
 	},
 
