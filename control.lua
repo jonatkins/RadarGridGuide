@@ -66,11 +66,14 @@ function isPlayerHoldingRadar(player)
 		end
 
 		-- is it a blueprint containing a radar?
-		if held.type == "blueprint" and held.is_blueprint_setup() then
+		if (held.type == "blueprint" or held.type == "blueprint-book") and held.is_blueprint_setup() then
 			local bp = held.get_blueprint_entities()
-			for _, bpentity in pairs(bp) do
-				if isRadar(bpentity.name) then
-					return true
+			-- check we actually have entities (blueprints can be tiles only, for example)
+			if bp then
+				for _, bpentity in pairs(bp) do
+					if isRadar(bpentity.name) then
+						return true
+					end
 				end
 			end
 		end
@@ -145,6 +148,9 @@ function updateRadarMarkers()
 			chunk = posToChunk(player.position)
 			radar_chunk = nearestRadarChunk(player,chunk)
 			markChunk(radar_chunk, player.surface)
+			-- also update map
+			local chunk_area = {{radar_chunk.x*chunk_size, radar_chunk.y*chunk_size},{radar_chunk.x*chunk_size+chunk_size-1, radar_chunk.y*chunk_size+chunk_size-1}}
+			player.force.chart(player.surface, chunk_area)
 		end
 	end
 	
@@ -218,6 +224,7 @@ function onTick()
 	end
 
 	-- there's no 'on_selection_changed' event fired when player.selected changes - fake something close to that here
+	-- (but will be added in 0.15 - https://forums.factorio.com/viewtopic.php?f=65&t=32796)
 	for _,player in pairs(game.players) do
 		last_sel_radar = getPlayerData(player,"selected-radar",false)
 		this_sel_radar = player.selected and player.selected.type == 'radar'
