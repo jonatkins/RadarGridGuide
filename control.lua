@@ -66,16 +66,32 @@ function isPlayerHoldingRadar(player)
 		end
 
 		-- is it a blueprint containing a radar?
-		if (held.type == "blueprint" or held.type == "blueprint-book") and held.is_blueprint_setup() then
-			local bp = held.get_blueprint_entities()
-			-- check we actually have entities (blueprints can be tiles only, for example)
-			if bp then
-				for _, bpentity in pairs(bp) do
-					if isRadar(bpentity.name) then
-						return true
-					end
+		if held.type == "blueprint" or held.type == "blueprint-book" then
+
+			if held.type == "blueprint-book" then
+				-- blueprint books might not have a blueprint in the active slot
+				local book_bp_active = held.get_inventory(defines.inventory.item_active)
+				if book_bp_active.is_empty() then
+					return false
 				end
 			end
+
+			if not held.is_blueprint_setup() then
+				return false
+			end
+
+			local bp = held.get_blueprint_entities()
+			if not bp then
+				-- tile-only blueprints have nil entities, rather than an empty list
+				return false
+			end
+
+			for _, bpentity in pairs(bp) do
+				if isRadar(bpentity.name) then
+					return true
+				end
+			end
+
 		end
 	end
 
