@@ -242,8 +242,8 @@ function onTick()
 	-- there's no 'on_selection_changed' event fired when player.selected changes - fake something close to that here
 	-- (but will be added in 0.15 - https://forums.factorio.com/viewtopic.php?f=65&t=32796)
 	for _,player in pairs(game.players) do
-		last_sel_radar = getPlayerData(player,"selected-radar",false)
-		this_sel_radar = player.selected and player.selected.type == 'radar'
+		local last_sel_radar = getPlayerData(player,"selected-radar",false)
+		local this_sel_radar = player.selected ~= nil and player.selected.type == 'radar'
 		if last_sel_radar ~= this_sel_radar then
 			need_update = true
 			setPlayerData(player, "selected-radar", this_sel_radar)
