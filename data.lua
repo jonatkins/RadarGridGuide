@@ -2,7 +2,7 @@ data:extend({
 
 	-- graphics for four corners
 	{
-		type = 'decorative',
+		type = 'simple-entity-with-owner',
 		name = 'top-left-radar-grid-guide',
 		flags = {"not-on-map"},
 		order = 'z[top-left-radarguide]',
@@ -19,7 +19,7 @@ data:extend({
 	},
 
 	{
-		type = 'decorative',
+		type = 'simple-entity-with-owner',
 		name = 'top-right-radar-grid-guide',
 		flags = {"not-on-map"},
 		order = 'z[top-right-radarguide]',
@@ -36,7 +36,7 @@ data:extend({
 	},
 
 	{
-		type = 'decorative',
+		type = 'simple-entity-with-owner',
 		name = 'bottom-left-radar-grid-guide',
 		flags = {"not-on-map"},
 		order = 'z[bottom-left-radarguide]',
@@ -53,7 +53,7 @@ data:extend({
 	},
 
 	{
-		type = 'decorative',
+		type = 'simple-entity-with-owner',
 		name = 'bottom-right-radar-grid-guide',
 		flags = {"not-on-map"},
 		order = 'z[bottom-right-radarguide]',
