@@ -70,8 +70,8 @@ function isPlayerHoldingRadar(player)
 
 			if held.type == "blueprint-book" then
 				-- blueprint books might not have a blueprint in the active slot
-				local book_bp_active = held.get_inventory(defines.inventory.item_active)
-				if book_bp_active.is_empty() then
+				local book_bp_active = held.get_inventory(defines.inventory.item_main)
+				if book_bp_active and book_bp_active.is_empty() then
 					return false
 				end
 			end
