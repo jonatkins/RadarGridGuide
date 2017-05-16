@@ -4,10 +4,18 @@ data:extend({
 	{
 		type = 'simple-entity-with-owner',
 		name = 'top-left-radar-grid-guide',
-		flags = {"not-on-map"},
 		order = 'z[top-left-radarguide]',
-		render_layer = "higher-object-above",
-		
+
+		flags = {"not-blueprintable", "not-deconstructable"},
+		render_layer = "explosion",
+		map_color = {r=1, g=1, b=1, a=0.8},
+		selectable_in_game = false,
+		mined_sound = nil,
+		minable = nil,
+		collision_box = nil,
+		selection_box = nil,
+		collision_mask = {},
+
 		pictures =
 		{
 			filename = "__RadarGridGuide__/graphics/top-left.png",
@@ -21,10 +29,18 @@ data:extend({
 	{
 		type = 'simple-entity-with-owner',
 		name = 'top-right-radar-grid-guide',
-		flags = {"not-on-map"},
 		order = 'z[top-right-radarguide]',
-		render_layer = "higher-object-above",
-		
+
+		flags = {"not-blueprintable", "not-deconstructable"},
+		render_layer = "explosion",
+		map_color = {r=1, g=1, b=1, a=0.8},
+		selectable_in_game = false,
+		mined_sound = nil,
+		minable = nil,
+		collision_box = nil,
+		selection_box = nil,
+		collision_mask = {},
+
 		pictures =
 		{
 			filename = "__RadarGridGuide__/graphics/top-right.png",
@@ -38,10 +54,18 @@ data:extend({
 	{
 		type = 'simple-entity-with-owner',
 		name = 'bottom-left-radar-grid-guide',
-		flags = {"not-on-map"},
 		order = 'z[bottom-left-radarguide]',
-		render_layer = "higher-object-above",
-		
+
+		flags = {"not-blueprintable", "not-deconstructable"},
+		render_layer = "explosion",
+		map_color = {r=1, g=1, b=1, a=0.8},
+		selectable_in_game = false,
+		mined_sound = nil,
+		minable = nil,
+		collision_box = nil,
+		selection_box = nil,
+		collision_mask = {},
+
 		pictures =
 		{
 			filename = "__RadarGridGuide__/graphics/bottom-left.png",
@@ -55,10 +79,18 @@ data:extend({
 	{
 		type = 'simple-entity-with-owner',
 		name = 'bottom-right-radar-grid-guide',
-		flags = {"not-on-map"},
 		order = 'z[bottom-right-radarguide]',
-		render_layer = "higher-object-above",
-		
+
+		flags = {"not-blueprintable", "not-deconstructable"},
+		render_layer = "explosion",
+		map_color = {r=1, g=1, b=1, a=0.8},
+		selectable_in_game = false,
+		mined_sound = nil,
+		minable = nil,
+		collision_box = nil,
+		selection_box = nil,
+		collision_mask = {},
+
 		pictures =
 		{
 			filename = "__RadarGridGuide__/graphics/bottom-right.png",
