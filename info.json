@@ -1,8 +1,8 @@
 {
   "name": "RadarGridGuide",
-  "version": "0.15.1",
+  "version": "0.16.1",
   "title": "Radar Grid Guide",
   "author": "jonatkins",
   "description": "Guide for deploying radars on a regular grid, to get 100% coverage without overlap.",
-  "factorio_version": "0.15"
+  "factorio_version": "0.16"
 }
