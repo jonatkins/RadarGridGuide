@@ -106,7 +106,6 @@ data:extend({
 		type = "custom-input",
 		name = "radar-grid-guide-hotkey",
 		key_sequence = "CONTROL + G",
-		consuming = "script-only",
 	},
 
 
